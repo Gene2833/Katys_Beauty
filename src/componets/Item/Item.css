@@ -1,19 +1,17 @@
 .tarjeta{
-    width: 290px;
+    width: 250px;
     padding: 30px;
     margin: 30px;
     font-size: 10px;
-    background-color: papayawhip;
-    border: 1px solid #e1e1e1;
+    background-color: pink;
+    border: 1px solid #ff0000;
     border-radius: 10px;
 }
 
 .imagen{
     width: 200px;
+    height: 140px;
     border-radius: 10px;
-    height: 150px;
-    object-fit: cover;
-    object-position: center;
 }
 
 .titulo{
@@ -42,7 +40,7 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: #FFFFFF;
+    color: #d30000;
     border: none;
     border-style: none;
     cursor: pointer;

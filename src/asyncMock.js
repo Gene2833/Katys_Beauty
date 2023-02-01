@@ -61,7 +61,7 @@ const products =[
     "category": "Corporales",
     "cantidad":1,
     "precio":1300,
-    "img": "https://vanityspacostarica.com/wp-content/uploads/2021/11/tecnicas.jpg"
+    "img": "https://www.revistapy.com/wp-content/uploads/2018/09/masaje.jpg"
     },
     {
     "id":9,
@@ -78,7 +78,22 @@ const products =[
     "cantidad":1,
     "precio":1300,
     "img": "https://luizadermatofuncional.com.br/wp-content/uploads/2018/07/Peeling-Organico-Interna.jpg"
-    }      
+    },
+    {
+        "id":11,
+    "nombre":"Limpieza Profunda Corporal",
+    "category": "Corporales",
+    "cantidad":1,
+    "precio":1300,
+    "img": "https://drbline.com/wp-content/uploads/2019/01/exfoliante-corporal.jpg"
+    }   ,{
+        "id":12,
+    "nombre":"Limpieza Facial profunda",
+    "category": "Facial",
+    "cantidad":1,
+    "precio":1300,
+    "img": "https://static.tuasaude.com/media/article/mv/xm/como-hacer-una-limpieza-facial-profunda_17745_l.jpg"
+    }  
 
 ]
 
