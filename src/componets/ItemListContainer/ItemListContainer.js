@@ -1,3 +1,4 @@
+import "./ItemListContainer.css"
 import { useState, useEffect } from "react"
 import {  getProducts, getProductsByCategory } from "../../asyncMock"
 import Itemlist from "../Itemlist/Itemlist"
@@ -7,6 +8,8 @@ const ItemListContainer = () =>{
     const [products , setProducts] = useState([])
 
     const {categoryId} = useParams ()
+
+
 
     useEffect(() =>{
         const asyncFunction = categoryId ? getProductsByCategory : getProducts
@@ -21,9 +24,9 @@ const ItemListContainer = () =>{
     }, [categoryId])
 
     return(
-        <div>
+        <div className="ItemListContainer">
             <h1>Lista de productos</h1>
-            <Itemlist products={products}/>
+            <Itemlist products={products} />
         </div>
     )
 }

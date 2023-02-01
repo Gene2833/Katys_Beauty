@@ -1,18 +1,23 @@
-import CartWidget from "../CartWidget/CartWidget"
-import { Link } from "react-router-dom"
+import { NavLink,  } from 'react-router-dom'
+import CartWidget from '../CartWidget/CartWidget'
+import './Navbar.css'
 
-const Navbar = () =>{
-    return(
+import { useNavigate } from 'react-router-dom'
 
-        <nav style={{display: "flex", justifyContent: "space-around"}}>
-            <h1>Katys Beuaty</h1>
-        <div>
-        <Link to='/category/Faciales' style={{margin:10}}>Tratamiento Faciales</Link>
-        <Link to='/category/Corporales'>Tratamiento Corporales</Link>
+const NavBar = () => {
+
+  const navigate = useNavigate()
+
+  return (
+    <nav className="NavBar" >
+          <h3 onClick={() => navigate('/')}>Katys beuaty</h3>
+        <div className="Categories">
+          <NavLink to={`/category/Corporales`} className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>Tratamientos Corporales</NavLink>
+          <NavLink to={`/category/Faciales`} className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>Tratamientos Faciales</NavLink>
         </div>
-        <CartWidget/>
-        </nav>
-    )
+        <CartWidget />
+    </nav>
+  )
 }
 
-export default Navbar
+export default NavBar

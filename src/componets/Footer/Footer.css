@@ -2,22 +2,28 @@
 
 footer {
     background: linear-gradient(to left, #ee8f97, #eec3c3);
+   
   }
-  footer .redes ul {
-    display: flex;
-    justify-content: center;
-  }
+
+footer .redes ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+}
+
+
   footer .redes li {
     margin: 5px;
-    list-style: none;
+   
   }
   footer .redes a {
     padding: 1px;
   }
   footer .redes img {
-    height: 60px;
-    width: 55px;
-    margin: 10px;
+    height: 40px;
+    width: 40px;
+    margin: 9px;
   }
   footer .creado {
     text-align: center;
