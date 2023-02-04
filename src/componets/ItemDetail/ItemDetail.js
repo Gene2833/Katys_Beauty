@@ -17,8 +17,6 @@ const ItemDetail = ({id, nombre, img,precio, category,stock}) =>{
             setQuantity(count)
     }
 
-
-
     return(
         <div className="tarjeta-item">
             <p>{category}</p>
@@ -27,7 +25,7 @@ const ItemDetail = ({id, nombre, img,precio, category,stock}) =>{
             <p className="precio-item">${precio}</p>
             {
                 quantity > 0 ?(
-                    <Link>Terminar Compra</Link>
+                    <Link to='/cart'>Terminar Compra</Link>
                 ) :(
                 <ItemCount stock={stock} onAdd={handleOnAdd}/>
                 )
