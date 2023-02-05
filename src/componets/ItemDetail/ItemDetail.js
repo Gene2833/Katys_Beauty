@@ -1,20 +1,25 @@
 import ItemCount from "../ItemCount/ItemCount"
-import { useState } from "react"
+import { useState, useContext } from "react"
 import "./ItemDetail.css"
 import { Link } from "react-router-dom"
+import { CartContext } from "../cartContext/cartContex"
 
 
 const ItemDetail = ({id, nombre, img,precio, category,stock}) =>{
    
     const [quantity, setQuantity] = useState (0)
 
-    const handleOnAdd = (count) =>{
-        console.log(`Se agregaron al carrito ${count} ${nombre} con el id: ${id}`)
+    const { addItem, isInCart } = useContext(CartContext)
+
+    const handleOnAdd = (quantity) =>{
+        console.log(`Se agregaron al carrito ${quantity} ${nombre} con el id: ${id}`)
         const productoAdd ={
-            id, nombre, precio, count
+            id, nombre, precio, quantity
         }
         console.log(productoAdd);
-            setQuantity(count)
+            setQuantity(quantity)
+
+            addItem({ id, nombre, precio, quantity})
     }
 
     return(
@@ -24,7 +29,7 @@ const ItemDetail = ({id, nombre, img,precio, category,stock}) =>{
             <img src={img} alt={nombre} className="imagen-item"/>
             <p className="precio-item">${precio}</p>
             {
-                quantity > 0 ?(
+                isInCart(id)  ?(
                     <Link to='/cart'>Terminar Compra</Link>
                 ) :(
                 <ItemCount stock={stock} onAdd={handleOnAdd}/>
