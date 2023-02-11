@@ -4,7 +4,7 @@ import ItemListContainer from './componets/ItemListContainer/ItemListContainer';
 import Navbar from './componets/NavBar/Navbar';
 import ItemDetailContainer from './componets/ItemDetailContainer/ItemDetailContainer';
 import Footer from './componets/Footer/footer';
-import { CartProvider } from "./componets/cartContext/cartContex";
+import { CartProvider } from "./componets/CartContext/CartContex"
 
 
 
