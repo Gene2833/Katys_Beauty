@@ -1,22 +1,30 @@
 import { useState, createContext } from "react"
-export const CartContext = createContext()
+
+
+export const CartContext = createContext({
+  cart: []
+})
 
 export const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([])
-    console.log(cart)
+
 
     const addItem = (productToAdd) => {
         if(!isInCart(productToAdd.id)) {
           setCart(prev => {
-            console.log(prev)
             return [...prev, productToAdd]
           })
-        } else {
-          console.error('YA ESTA AGREGADO')
-        }
+        } 
     }
 
-    const isInCart = (id) => cart.some(prod => id === prod.id)
+    const isInCart = (id) =>{
+     return cart.some(prod => id === prod.id)
+    } 
+    
+    const removeItem = (id) =>{
+      const cartUpdated = cart.filter(prod => prod.id !== id)
+      setCart(cartUpdated)
+    }
 
     const getTotalQuantity = () => {
       let accu = 0
@@ -31,7 +39,7 @@ export const CartProvider = ({ children }) => {
     const totalQuantity = getTotalQuantity()
 
     return (
-        <CartContext.Provider value={{addItem, isInCart, totalQuantity}}>
+        <CartContext.Provider value={{cart,addItem,totalQuantity, removeItem}}>
             { children }
         </CartContext.Provider>
     )
