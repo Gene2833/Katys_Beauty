@@ -32,10 +32,7 @@ const Checkout = () => {
 
             const productsRef = query(collection(db, 'products'), where(documentId(), 'in', ids))
 
-            // getDocs(productsRef).then(productsAddedToCartFromFirestore => {
-
-            // })
-
+        
             const productsAddedToCartFromFirestore = await getDocs(productsRef)
             const { docs } = productsAddedToCartFromFirestore
 
