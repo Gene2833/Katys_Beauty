@@ -1,4 +1,3 @@
-import "./Item.css"
 import { Link } from "react-router-dom"
 
 
@@ -6,12 +5,16 @@ const Item = ({ id,nombre,img, precio }) => {
         
         
     return (
-       <div className="tarjeta">
-            <h2 className="titulo">{nombre}</h2>
-            <img src={img} alt="nombre" className="imagen"/>
-            <p className="precio">$ {precio}</p>
-            <Link to={`/item/${id}`} className="option"> Ver Detalle</Link>
-       </div>
+        <div className="card m-4 " style={{width: 390}}>
+        <img src={img}  alt={nombre}/>
+        <div className="card-body">
+          <h5 className="card-title text-center">{nombre}</h5>
+          <p className="card-text text-center">$ {precio}</p>
+        </div>
+        <div className="card-body">
+        <Link to={`/item/${id}`} className="btn btn-info btn-lg btn-block "> Ver Detalle</Link>
+        </div>
+      </div>
     )
 }
 
