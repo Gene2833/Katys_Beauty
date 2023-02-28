@@ -20,7 +20,7 @@ const {removeItem} = useContext(CartContext)
          </div>
          <div class="col">
             <h2>Resumen del pedido</h2>
-            <p>subtotal: {precio * quantity}</p>
+            <p>subtotal: {total}</p>
             <p>Retirar de la tienda     GRATIS</p>
             <p>Region metropolitana de Santiago, Chile</p>
             <p>Total: {total}</p>

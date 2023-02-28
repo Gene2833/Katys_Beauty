@@ -36,7 +36,7 @@ const ItemDetailContainer = () =>{
 
 
     return(
-        <div className="ItemDetailContainer">
+        <div className="justify-content-center d-flex  flex-direction: column ">
         <h1>Detalle de producto</h1>
         <ItemDetail {...product}/>
         </div>
