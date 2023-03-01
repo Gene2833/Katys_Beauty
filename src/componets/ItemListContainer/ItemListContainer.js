@@ -1,4 +1,4 @@
-import "./ItemListContainer.css"
+
 import { useState, useEffect } from "react"
 import Itemlist from "../Itemlist/Itemlist"
 import { useParams } from "react-router-dom"
@@ -41,8 +41,8 @@ const ItemListContainer = ({greeting}) =>{
     }
 
     return(
-        <div className="ItemListContainer">
-            <h1>{greeting}</h1>
+        <div>
+            <h2 className="text-center">{greeting}</h2>
             <Itemlist products={products} />
         </div>
     )

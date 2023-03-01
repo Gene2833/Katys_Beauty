@@ -1,9 +1,9 @@
 import Item from "../Item/Item"
-import "./Itemlist.css"
+
 
 const Itemlist = ({products}) =>{
         return(
-            <div className="List-productos">
+            <div className="    flex-direction: row flex-wrap justify-content-between">
                 {products.map(prod => <Item key={prod.id} {...prod} />)}
             </div>
         )

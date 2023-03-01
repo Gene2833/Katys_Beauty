@@ -11,7 +11,7 @@ const {removeItem} = useContext(CartContext)
         <div class="container">
                 <div class="row">
                     <div class="col">
-                    <img src={img} alt={nombre} />
+                    <img src={img} className="card-img-top rounded border border-info" alt={nombre} />
                     </div>
             <div class="col">
                 <h5>{nombre}</h5>

@@ -2,7 +2,6 @@ import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import { getDoc, doc } from "firebase/firestore"
 import ItemDetail from "../ItemDetail/ItemDetail"
-import "./ItemDetailContainer.css"
 import { db } from "../../services/firebase/firebaseConfig"
 
 const ItemDetailContainer = () =>{
@@ -36,7 +35,7 @@ const ItemDetailContainer = () =>{
 
 
     return(
-        <div className="justify-content-center d-flex  flex-direction: column ">
+        <div>
         <h1>Detalle de producto</h1>
         <ItemDetail {...product}/>
         </div>

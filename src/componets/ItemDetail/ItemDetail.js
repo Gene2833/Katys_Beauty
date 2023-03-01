@@ -15,7 +15,7 @@ const ItemDetail = ({id, nombre, img,precio,stock, descripcion}) =>{
         
             setQuantity(parseInt(quantity))
 
-            addItem({ id, nombre, precio, quantity})
+            addItem({ id, nombre, precio, img, quantity})
     }
 
     return(

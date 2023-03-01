@@ -7,7 +7,7 @@ const Cart = () =>{
 
     return(
         <div>
-        <h1>estos son los productos de tu carrito</h1>
+        <h1 className="text-center p-3">estos son los productos de tu carrito</h1>
         <CartList cart={cart}/>
         </div>
         
