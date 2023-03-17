@@ -20,12 +20,12 @@ const ItemDetail = ({id, nombre, img,precio,stock, descripcion}) =>{
 
     return(
         <div class="container">
-        <div class="row">
+        <div class="row p-5">
           <div class="col">
-          <img src={img} className="card-img-top rounded border border-info" alt={nombre}/>
+          <img src={img} className="card-img-top rounded border border-info " alt={nombre}/>
           </div>
           <div class="col">
-          <h1>{nombre}</h1>
+          <h1 className="text-center">{nombre}</h1>
         <p className="d-flex justify-content-center m-4">$ {precio}</p> 
         {
                 quantity>0  ?(

@@ -9,6 +9,9 @@ const Checkout = () => {
     const [loading, setLoading] = useState(false)
     const [orderId, setOrderId] = useState('')
     const { cart, total, clearCart } = useContext(CartContext)
+    const [nombre, setNombre] = useState ("")
+    const [phone, setPhone] =useState ("")
+    const [email, setEmail] = useState ("")
 
     const navigate = useNavigate()
 
@@ -17,9 +20,9 @@ const Checkout = () => {
         try {
             const objOrder = {
                 buyer: {
-                    name: 'Sebastian Zuviria',
-                    phone: '123456789',
-                    email: 'contact@sebaz.io'
+                    name: nombre,
+                    phone: phone,
+                    email:email
                 },
                 items: cart,
                 total
@@ -81,6 +84,16 @@ const Checkout = () => {
 
     }
 
+    const handleChangeName = (e) =>{
+      setNombre(e.tarjet.value)
+    }
+    const handleChangePhone = (e) =>{
+      setPhone(e.tarjet.value)
+    }
+    const handleChangeEmail = (e) =>{
+      setEmail(e.tarjet.value)
+    }
+    
     if(loading) {
         return <h1>Generando orden...</h1>
     }
@@ -102,9 +115,23 @@ const Checkout = () => {
     return (
         <div>
             <h1>Checkout</h1>
-            <button onClick={createOrder}>Generar orden</button>
+        <div>
+            <div>
+                <input type="text" onChange={handleChangeName} placeholder="Nombre"/>
+            </div>
+            <div>
+                <input type="text" onChange={handleChangePhone} placeholder="phone"/>
+            </div>
+            <div>
+                <input type="text" onChange={handleChangeEmail} placeholder="Email"/>
+            </div>
+             <button onClick={createOrder}>Generar orden</button>
+        </div>
+
+           
         </div>
     )
 }
 
 export default Checkout
+ 

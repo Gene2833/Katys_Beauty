@@ -3,10 +3,9 @@ import ItemListContainer from './componets/ItemListContainer/ItemListContainer';
 import Navbar from './componets/NavBar/Navbar';
 import ItemDetailContainer from './componets/ItemDetailContainer/ItemDetailContainer';
 import Footer from './componets/Footer/footer';
-import Cart from "./componets/Cart/Cart";
 import { CartProvider } from './componets/CartContext/CartContex';
-import Checkout from "./componets/Checkout/Checkout";
-
+import Cart from './componets/Cart/Cart';
+import Checkout from './componets/Checkout/Checkout';
 
 function App() {
   return (
