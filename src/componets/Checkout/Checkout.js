@@ -83,16 +83,6 @@ const Checkout = () => {
 
 
     }
-
-    const handleChangeName = (e) =>{
-      setNombre(e.tarjet.value)
-    }
-    const handleChangePhone = (e) =>{
-      setPhone(e.tarjet.value)
-    }
-    const handleChangeEmail = (e) =>{
-      setEmail(e.tarjet.value)
-    }
     
     if(loading) {
         return <h1>Generando orden...</h1>
@@ -117,13 +107,13 @@ const Checkout = () => {
             <h1>Checkout</h1>
         <div>
             <div>
-                <input type="text" onChange={handleChangeName} placeholder="Nombre"/>
+                <input type="text" onChange={ setEmail} placeholder="Nombre"/>
             </div>
             <div>
-                <input type="text" onChange={handleChangePhone} placeholder="phone"/>
+                <input type="text" onChange={setPhone} placeholder="phone"/>
             </div>
             <div>
-                <input type="text" onChange={handleChangeEmail} placeholder="Email"/>
+                <input type="text" onChange={setNombre} placeholder="Email"/>
             </div>
              <button onClick={createOrder}>Generar orden</button>
         </div>
