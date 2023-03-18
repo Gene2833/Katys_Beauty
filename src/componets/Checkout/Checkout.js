@@ -21,8 +21,7 @@ const Checkout = () => {
                 buyer: {
                     name: nombre,
                     phone: phone,
-                    email:
-                    email
+                    email:email
                 },
                 items: cart,
                 total
@@ -101,7 +100,8 @@ const Checkout = () => {
     return (
         <div >
             <h1 className="d-flex justify-content-center">Checkout</h1>
-        <div className="container ">
+            
+        <form className="container" onSubmit={createOrder}>
             <div className="row row-cols-1">
               <div className="col p-2 d-flex justify-content-center">
                 <input type="text"  onChange={(e) => setNombre(e.target.value)} placeholder="Nombre" required/>
@@ -112,12 +112,13 @@ const Checkout = () => {
             <div className="col p-2 d-flex justify-content-center">
                 <input type="text"  onChange={(e) => setEmail(e.target.value)} placeholder="Email" required/>
             </div>
-             <button className="btn d-flex justify-content-center" onClick={createOrder}>Generar orden</button>
-            
+          
+             <button className="btn d-flex justify-content-center">Generar orden</button>
         </div>
-      </div>
+      </form>
            
         </div>
+        
     )
 }
 
