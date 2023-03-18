@@ -2,7 +2,6 @@ import { collection, query, where, documentId, getDocs, writeBatch, addDoc } fro
 import { useContext, useState } from "react"
 import { CartContext } from "../../componets/CartContext/CartContex"
 import { db } from "../../services/firebase/firebaseConfig"
-
 import { useNavigate } from "react-router-dom"
 
 const Checkout = () => {
@@ -22,7 +21,8 @@ const Checkout = () => {
                 buyer: {
                     name: nombre,
                     phone: phone,
-                    email:email
+                    email:
+                    email
                 },
                 items: cart,
                 total
@@ -96,28 +96,26 @@ const Checkout = () => {
         )
     }
 
-    if(cart.length === 0) {
-        return (
-            <h1>No hay productos en el carrito</h1>
-        )
-    }
+   
 
     return (
-        <div>
-            <h1>Checkout</h1>
-        <div>
-            <div>
-                <input type="text" onChange={ setEmail} placeholder="Nombre"/>
+        <div >
+            <h1 className="d-flex justify-content-center">Checkout</h1>
+        <div className="container ">
+            <div className="row row-cols-1">
+              <div className="col p-2 d-flex justify-content-center">
+                <input type="text"  onChange={(e) => setNombre(e.target.value)} placeholder="Nombre" required/>
             </div>
-            <div>
-                <input type="text" onChange={setPhone} placeholder="phone"/>
+            <div className="col p-2 d-flex justify-content-center">
+                <input type="text" onChange={(e) => setPhone(e.target.value)} placeholder="phone" required/>
             </div>
-            <div>
-                <input type="text" onChange={setNombre} placeholder="Email"/>
+            <div className="col p-2 d-flex justify-content-center">
+                <input type="text"  onChange={(e) => setEmail(e.target.value)} placeholder="Email" required/>
             </div>
-             <button onClick={createOrder}>Generar orden</button>
+             <button className="btn d-flex justify-content-center" onClick={createOrder}>Generar orden</button>
+            
         </div>
-
+      </div>
            
         </div>
     )

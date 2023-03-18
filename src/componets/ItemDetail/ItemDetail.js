@@ -22,13 +22,12 @@ const ItemDetail = ({id, nombre, img,precio,stock, descripcion}) =>{
         <div class="container">
         <div class="row p-5">
           <div class="col">
-          <img src={img} className="card-img-top rounded border border-info " alt={nombre}/>
+          <img src={img} className="card-img-top rounded border border- " alt={nombre}/>
           </div>
           <div class="col">
           <h1 className="text-center">{nombre}</h1>
         <p className="d-flex justify-content-center m-4">$ {precio}</p>
-          <h4 className="d-flex justify-content-center p-3">Informacion del tratamiento</h4>
-        <p>{descripcion}</p>
+         
         {
                 quantity>0  ?(
                     <Link to='/cart' className="d-flex justify-content-center p-2">Terminar Compra</Link>
@@ -37,7 +36,8 @@ const ItemDetail = ({id, nombre, img,precio,stock, descripcion}) =>{
                 )
             
             }
-       
+        <h4 className="d-flex justify-content-center p-3">Informacion del tratamiento</h4>
+        <p>{descripcion}</p>
           </div>
         </div>
         </div>

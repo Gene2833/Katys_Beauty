@@ -7,9 +7,10 @@ import { CartProvider } from './componets/CartContext/CartContex';
 import Cart from './componets/Cart/Cart';
 import Checkout from './componets/Checkout/Checkout';
 
+
 function App() {
   return (
-    <div className="App">
+  
     <CartProvider>
      <BrowserRouter>
      <Navbar/>
@@ -23,7 +24,7 @@ function App() {
      <Footer/>
      </BrowserRouter>
      </CartProvider>
-    </div>
+    
   );
 }
 

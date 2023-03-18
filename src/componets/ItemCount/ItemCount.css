@@ -1,6 +1,45 @@
 .button{
     height: 45px;
     width: 25px;
-    background-color: #e9929e;
-    color: black;
+    color: black;  
 }
+
+.btn{
+    background-color: #e9929e;
+    cursor: pointer;
+  background-image: linear-gradient(to bottom,#f7baff, #fc87ec);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
