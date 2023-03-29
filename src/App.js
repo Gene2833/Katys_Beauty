@@ -1,11 +1,8 @@
 import {BrowserRouter,Route, Routes} from 'react-router-dom'
-import ItemListContainer from './componets/ItemListContainer/ItemListContainer';
-import Navbar from './componets/NavBar/Navbar';
-import ItemDetailContainer from './componets/ItemDetailContainer/ItemDetailContainer';
+import Home from './componets/Home/Home';
 import Footer from './componets/Footer/footer';
 import { CartProvider } from './componets/CartContext/CartContex';
-import Cart from './componets/Cart/Cart';
-import Checkout from './componets/Checkout/Checkout';
+import Nosotros from './componets/Nosotros/Nosotros';
 
 
 function App() {
@@ -13,13 +10,9 @@ function App() {
   
     <CartProvider>
      <BrowserRouter>
-     <Navbar/>
-     <Routes>
-      <Route path='/' element={<ItemListContainer greeting={"Listado de productos"}/>}/>
-      <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
-      <Route path='/item/:productId' element={<ItemDetailContainer/>} />
-      <Route path='/cart' element={<Cart/>} />
-      <Route path='/checkout' element={<Checkout/>} />
+     <Home/>
+     <Routes> 
+    <Route path='/Nosotros'  element={<Nosotros/>}/>
      </Routes>
      <Footer/>
      </BrowserRouter>

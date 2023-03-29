@@ -1,0 +1,99 @@
+.titulo-seccion{
+    text-align: center;
+    font-size: 35px;
+    color: rgb(233, 0, 241);
+}
+
+.copy{
+    text-align: center;
+    color: #000000;
+    margin: 20px 0;
+}
+
+.tratamiento{
+    padding-top: 40px ;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+   
+}
+
+
+
+.tratamiento1{
+    font-size: 20px;
+    width: 12em;
+    height: 13em;
+    background-image: url("https://www.materialestetica.com/blog/wp-content/uploads/2020/02/tratamientos-para-rejuvenecimiento-facial-que-no-conocias.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #ffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.tratamiento2{
+    font-size: 20px;
+    width: 12em;
+    height: 13em;
+    background-image: url("https://beautyclinicvalencia.com/wp-content/uploads/2019/07/REMODELAJE-CORPORAL.png");
+    background-size: cover;
+    background-position: center;
+    color: #ffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+
+.tratamiento3{
+    font-size: 20px;
+    width: 12em;
+    height: 13em;
+    background-image: url("https://imagenes.elpais.com/resizer/6OOBQQ7wm8a7mx3MWFAF4HZ0ALc=/414x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/HJY4IMZQ7VCTJNH2F4OGAY2AVM.png");
+    background-size: cover;
+    background-position: center;
+    color: #ffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+main{
+    margin-bottom: 50px;
+}
+
+
+.sect2{
+    width: 100%;
+    text-align: center;
+    padding: 60px 40px ;
+}
+
+.sect2h2{
+    color: rgb(233, 0, 241);
+    width: 400px;
+    height: 100px;
+    margin: auto;
+    text-align: center;
+    line-height: 100px;
+    
+}
+
+.texto2{
+    color:#000000;
+    padding: 20px;
+}
+.sect1{
+    height: 500px;
+    background-image: url("https://levinia.glowchile.com/local/nccatalog/postfile.php?filearea=meta_image_detalle&fileid=643428207");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+ 
+}
