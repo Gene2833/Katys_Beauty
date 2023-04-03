@@ -30,7 +30,7 @@ const ItemDetail = ({id, nombre, img,precio,stock, descripcion}) =>{
          
         {
                 quantity>0  ?(
-                    <Link to='/cart' className="d-flex justify-content-center p-2">Terminar Compra</Link>
+                    <Link to='/cart' className="d-flex justify-content-center p-1">Terminar Compra</Link>
                 ) :(
                 <ItemCount stock={stock} onAdd={handleOnAdd}/>
                 )
