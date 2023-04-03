@@ -33,13 +33,13 @@ const ItemListContainer = ({greeting}) =>{
         }).finally(() =>{
             setLoanding(false)
         })
-
+    
     }, [categoryId])
 
     if(loading){
         return <h1>Cargando productos...</h1>
     }
-
+    
     return(
         <div>
             <h2 className="text-center">{greeting}</h2>

@@ -6,7 +6,7 @@ const Nosotros = () =>{
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <img src="foto-nosotros.jpg" alt="Foto de Nosotros"/>
+        <img src="https://github.com/Gene2833/Katys-Beauty/blob/master/assets/imagenes/Katys.jpg?raw=true" alt="Foto de Nosotros"/>
       </div>
       <div class="col-md-6">
         <h2>Sobre nosotros</h2>

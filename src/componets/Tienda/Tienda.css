@@ -1,0 +1,17 @@
+.sect1{
+    height: 500px;
+    background-image: url("https://http2.mlstatic.com/D_NQ_NP_974459-MLM51505396209_092022-W.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+ 
+}
+
+
+h2{
+    text-align: center;
+    margin-top: 15px;
+    font-size: 25px;
+    color: pink;
+}
