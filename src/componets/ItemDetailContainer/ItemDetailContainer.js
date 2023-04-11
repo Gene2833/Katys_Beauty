@@ -10,7 +10,7 @@ const ItemDetailContainer = () =>{
     const {productId} = useParams ()
 
     useEffect(() =>{
-        document.title ="Detalle del producto"
+        document.title ="Detalle del tratamiento"
     },[])
 
     useEffect(() =>{
@@ -30,13 +30,13 @@ const ItemDetailContainer = () =>{
     },[productId])
 
     if(loading) {
-        return <h1>Cargando...</h1>
+        return <h1 className="text-center">Cargando...</h1>
     }
 
 
     return(
         <div>
-        <h1 className="text-center p-4">Detalle de producto</h1>
+        <h1 className="text-center p-4">Detalle del tratamiento</h1>
         <ItemDetail {...product}/>
         </div>
     )

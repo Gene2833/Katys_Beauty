@@ -1,7 +1,13 @@
 import "./Contacto.css"
-
+import { useEffect } from "react"
 
 const Contacto = () =>{
+
+     
+  useEffect(() =>{
+    document.title ="Katys beuaty - Contacto"
+},[])
+
     return(
         <div>
             <h1 className="titulo">Contáctanos</h1>

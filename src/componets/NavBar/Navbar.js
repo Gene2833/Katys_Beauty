@@ -18,7 +18,7 @@ const NavBar = () => {
       </div>
       <div className='enlaces' >
       <li><Link to={`/`} style={{textDecoration: "none", color: "black"}}>Inicio</Link></li>
-      <li><Link to={`/Tienda`}  style={{textDecoration: "none", color: "black"}}>Tienda</Link></li> 
+      <li><Link to={`ItemListContainer`}  style={{textDecoration: "none", color: "black"}}>Tienda</Link></li> 
       <li><Link to={`/Nosotros`}  style={{textDecoration: "none", color: "black"}}>Acerca de Nosotros</Link></li>
       <li><Link to={`/Contacto`}  style={{textDecoration: "none", color: "black"}}>Contacto</Link>  </li>  
       </div> 

@@ -1,45 +1,35 @@
+.contador__boton{
+  margin: 10px;
+  width: 30px;
+  background: rgb(245, 149, 165);
+  border-radius: 5px;
+  border: none;
+}
+
+.contador__numero{
+  text-align: center;
+}
+
 .button{
-    height: 45px;
-    width: 25px;
-    color: black;  
+  display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.btn{
-    background-color: #e9929e;
-    cursor: pointer;
-  background-image: linear-gradient(to bottom,#f7baff, #fc87ec);
+.botones{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px;
+  
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.contador__boton--agregar{
+  background: rgb(253, 144, 162);
+  border: none;
+  font-size: 22px;
+  border-radius: 10px;
+  width: 250px;
+  height: 40px;
+}

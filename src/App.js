@@ -7,7 +7,6 @@ import NavBar from './componets/NavBar/Navbar';
 import Contacto from "./componets/Contacto/Contacto"
 import Cart from "./componets/Cart/Cart"
 import Checkout from './componets/Checkout/Checkout';
-import Tienda from './componets/Tienda/Tienda';
 import ItemListContainer from "./componets/ItemListContainer/ItemListContainer"
 import ItemDetailContainer from "./componets/ItemDetailContainer/ItemDetailContainer"
 
@@ -21,8 +20,7 @@ function App() {
     <NavBar/>
      <Routes>
      <Route path='/'  element={<Home/>}/> 
-     <Route path='/Tienda'  element={<Tienda/>}/>
-     <Route path='/' element={<ItemListContainer greeting={"Listado de productos"}/>}/>
+     <Route path='/ItemListContainer' element={<ItemListContainer greeting={"Listado de productos"}/>}/>
       <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
       <Route path='/item/:productId' element={<ItemDetailContainer/>} />
     <Route path='/Nosotros'  element={<Nosotros/>}/>

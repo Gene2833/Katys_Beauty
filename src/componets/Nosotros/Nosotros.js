@@ -1,6 +1,13 @@
 import "./Nosotros.css"
-
+import { useEffect } from "react"
 const Nosotros = () =>{
+
+
+   
+  useEffect(() =>{
+    document.title ="Katys beauty - Acerca de nosotros"
+},[])
+
     return(
         <section class="about-us">
   <div class="container">

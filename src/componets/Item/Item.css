@@ -1,0 +1,43 @@
+.tarjeta {
+  border: 1px solid #e4e4e4;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #ffffff;
+  text-align: center;
+  width: 300px; /* Ancho de la tarjeta */
+    margin: 21px;
+}
+
+.tarjeta img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.tarjeta h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.tarjeta p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.boton {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff69b4;
+  color: #ffffff;
+  border: 1px solid #ff69b4;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.boton:hover {
+  background-color: #ffffff;
+  color: #ff69b4;
+}

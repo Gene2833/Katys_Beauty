@@ -1,5 +1,5 @@
-.sect1{
-    height: 500px;
+.sect3{
+    height: 700px;
     background-image: url("https://http2.mlstatic.com/D_NQ_NP_974459-MLM51505396209_092022-W.jpg");
     background-position: center;
     background-size: cover;
@@ -8,10 +8,9 @@
  
 }
 
-
 h2{
     text-align: center;
-    margin-top: 15px;
+    margin-top: 35px;
     font-size: 25px;
-    color: pink;
+    color: rgb(245, 120, 141);
 }

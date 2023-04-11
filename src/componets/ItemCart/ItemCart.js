@@ -18,11 +18,11 @@ const {removeItem} = useContext(CartContext)
                 <p>${precio}</p>
                 <button onClick={() => removeItem(id)}>eliminar</button>
                 <p> total: {total}</p>
-                <Link to="/checkout">Checkout</Link>
+                
          </div>
     
         </div>
-           
+           <Link to="/checkout">Checkout</Link>
         </div>
     )
 }

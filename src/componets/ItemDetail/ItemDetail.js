@@ -2,7 +2,7 @@ import ItemCount from "../ItemCount/ItemCount"
 import { useState, useContext } from "react"
 import { Link } from "react-router-dom"
 import { CartContext } from "../CartContext/CartContex"
-
+import "./ItemDetail.css"
 
 const ItemDetail = ({id, nombre, img,precio,stock, descripcion}) =>{
    
@@ -20,27 +20,32 @@ const ItemDetail = ({id, nombre, img,precio,stock, descripcion}) =>{
 
     return(
         <div class="container">
-        <div class="row p-5">
+        <div class="row">
           <div class="col">
-          <img src={img} className="card-img-top rounded border border- " alt={nombre}/>
-          </div>
-          <div class="col">
-          <h1 className="text-center">{nombre}</h1>
-        <p className="d-flex justify-content-center m-4">$ {precio}</p>
-         
-        {
-                quantity>0  ?(
-                    <Link to='/cart' className="d-flex justify-content-center p-1">Terminar Compra</Link>
-                ) :(
-                <ItemCount stock={stock} onAdd={handleOnAdd}/>
-                )
             
+          <img src={img} className="card-img-top rounded border border-light" alt={nombre}/>
+        
+          </div>
+          
+            <div className="col"> 
+            <h1 className="Titulo-Detail">{nombre}</h1>
+        <p className="precio"> precio: ${precio}</p>
+           {
+                quantity>0  ?(
+                    <Link to='/cart' style={{display: "flex", justifyContent: "center"}}>Terminar Compra</Link>
+                ) :(
+                <ItemCount stock={stock} onAdd={handleOnAdd} />
+                )
+
             }
-        <h4 className="d-flex justify-content-center p-3">Informacion del tratamiento</h4>
+         
+         </div>
+     
+        <h4 className="h4">Informacion del tratamiento</h4>
         <p>{descripcion}</p>
           </div>
         </div>
-        </div>
+        
     )
 }
 

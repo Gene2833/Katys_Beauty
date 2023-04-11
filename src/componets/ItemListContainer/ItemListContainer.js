@@ -1,18 +1,23 @@
-
+import { Link } from "react-router-dom"
+import "./ItemListContainer.css"
 import { useState, useEffect } from "react"
 import Itemlist from "../Itemlist/Itemlist"
 import { useParams } from "react-router-dom"
 import {getDocs, collection, query , where} from "firebase/firestore"
 import { db } from "../../services/firebase/firebaseConfig"
+import Tienda from "../Tienda/Tienda"
 
-
-const ItemListContainer = ({greeting}) =>{
+const ItemListContainer = () =>{
     const [products , setProducts] = useState([])
-    const [loading , setLoanding] = useState(true)
     const {categoryId} = useParams ()
 
+    
     useEffect(() =>{
-        setLoanding(true)
+        document.title ="Katys beuaty - Tienda"
+    },[])
+
+    useEffect(() =>{
+    
 
         const collectionRef = categoryId
         ?query(collection(db, "products"), where("category", "==", categoryId))
@@ -31,18 +36,24 @@ const ItemListContainer = ({greeting}) =>{
         }).catch(error =>{
             console.log(error);
         }).finally(() =>{
-            setLoanding(false)
+           
         })
     
     }, [categoryId])
 
-    if(loading){
-        return <h1>Cargando productos...</h1>
-    }
+  
     
     return(
         <div>
-            <h2 className="text-center">{greeting}</h2>
+           <Tienda/>
+
+           <div className="Enlaces">
+           <p>Seleccionar Categoría de Productos</p>
+           <li><Link  style={{textDecoration: "none", color: "black" }}to={`/category/Faciales`}>Tratamientos Faciales</Link></li>
+            <li><Link  style={{textDecoration: "none",color: "black" }} to={`/category/Corporales`}  >Tratamientos Corporales</Link></li> 
+            <li><Link  style={{textDecoration: "none", color: "black"}} to={`/category/Capilares`}  >Tratamientos Capilares</Link></li>
+        </div>
+           
             <Itemlist products={products} />
         </div>
     )

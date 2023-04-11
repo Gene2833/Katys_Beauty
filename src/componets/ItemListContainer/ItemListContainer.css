@@ -1,0 +1,22 @@
+
+p{
+    padding: 20px;
+    margin: 30px;
+}
+
+.Enlaces{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    background-color: pink;
+}
+
+
+.Enlaces li{
+    list-style: none;
+    text-decoration: none;
+    padding: 20px;
+    margin: 30px;
+
+}
+
