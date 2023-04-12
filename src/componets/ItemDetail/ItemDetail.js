@@ -30,9 +30,11 @@ const ItemDetail = ({id, nombre, img,precio,stock, descripcion}) =>{
             <div className="col"> 
             <h1 className="Titulo-Detail">{nombre}</h1>
         <p className="precio"> precio: ${precio}</p>
+        
            {
                 quantity>0  ?(
                     <Link to='/cart' style={{display: "flex", justifyContent: "center"}}>Terminar Compra</Link>
+            
                 ) :(
                 <ItemCount stock={stock} onAdd={handleOnAdd} />
                 )

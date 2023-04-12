@@ -1,8 +1,10 @@
+import "./Checkout.css"
 import { collection, query, where, documentId, getDocs, writeBatch, addDoc } from "firebase/firestore"
 import { useContext, useState } from "react"
+import { Link } from "react-router-dom"
 import { CartContext } from "../../componets/CartContext/CartContex"
 import { db } from "../../services/firebase/firebaseConfig"
-import { useNavigate } from "react-router-dom"
+
 
 const Checkout = () => {
     const [loading, setLoading] = useState(false)
@@ -12,9 +14,10 @@ const Checkout = () => {
     const [phone, setPhone] =useState ("")
     const [email, setEmail] = useState ("")
 
-    const navigate = useNavigate()
+   
 
-    const createOrder = async () => {
+    const createOrder = async (e) => {
+        e.preventDefault()
         setLoading(true)
         try {
             const objOrder = {
@@ -66,10 +69,7 @@ const Checkout = () => {
 
                 clearCart()
 
-                setTimeout(() => {
-                    navigate('/')
-                }, 5000)
-
+                
                 console.log(id)
             } else {
                 console.error('hay productos fuera de stock')
@@ -84,13 +84,17 @@ const Checkout = () => {
     }
     
     if(loading) {
-        return <h1>Generando orden...</h1>
+        return <h1 style={{textAlign: "center"}}>Generando orden...</h1>
     }
 
     if(orderId) {
         return (
             <div>
-                <h1>El Id de su compra es: {orderId}</h1>
+                <h1 className="Compra">Compra registrada con éxito!</h1>
+                <p className="orden">Tu número de orden es: {orderId}</p>
+                <div className="li">
+                <Link to="/ItemListContainer" style={{ textDecoration: "none", textAlign: "center", color: "black"}}> Volver a la tienda</Link>
+                </div>
             </div>
         )
     }
@@ -101,20 +105,20 @@ const Checkout = () => {
         <div >
             <h1 className="d-flex justify-content-center">Checkout</h1>
             
-        <form className="container" onSubmit={createOrder}>
-            <div className="row row-cols-1">
-              <div className="col p-2 d-flex justify-content-center">
-                <input type="text"  onChange={(e) => setNombre(e.target.value)} placeholder="Nombre" required/>
-            </div>
-            <div className="col p-2 d-flex justify-content-center">
-                <input type="text" onChange={(e) => setPhone(e.target.value)} placeholder="phone" required/>
-            </div>
-            <div className="col p-2 d-flex justify-content-center">
-                <input type="text"  onChange={(e) => setEmail(e.target.value)} placeholder="Email" required/>
-            </div>
+        <form onSubmit={createOrder}>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text"  onChange={(e) => setNombre(e.target.value)} placeholder="Nombre" required/>  
+
+        <label for="correo">Telefono:</label>       
+        <input type="text" onChange={(e) => setPhone(e.target.value)} placeholder="phone" required/>
+
+        <label for="asunto">Correo:</label>
+        <input type="text"  onChange={(e) => setEmail(e.target.value)} placeholder="Email" required/>
+      
           
-             <button className="btn d-flex justify-content-center">Generar orden</button>
-        </div>
+            <input type="submit" value="Generar orden"/>
+       
       </form>
            
         </div>
