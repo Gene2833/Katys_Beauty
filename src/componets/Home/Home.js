@@ -8,9 +8,13 @@ const Main = () =>{
     },[])
     return(
         <main>
-            <div class="home">
-                <h1 className="homeTitulo">Bienvenidos a Katys Beauty</h1> 
-            </div>
+           
+                
+                
+                    <div className="sect3">
+                       
+                    </div>
+            
 
       
 

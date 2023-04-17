@@ -1,0 +1,35 @@
+.col .boton-carrito{
+    background: pink;
+    border: none;
+    font-size: 18px;
+    border-radius: 5px;
+    width: 150px;
+    height: 40px;
+}
+
+.col .nombre-carrito{
+    text-align: center;
+    font-size: 25px;
+}
+
+.col .imagen-carrito{
+    border-radius: 5px;
+    -webkit-box-shadow: -1px -1px 21px -6px rgba(0,0,0,1);
+    -moz-box-shadow: -1px -1px 21px -6px rgba(0,0,0,1);
+    box-shadow: -1px -1px 21px -6px rgba(0,0,0,1);
+}
+
+.col .cantidad-carrito{
+    font-size: 25px;
+}
+
+
+.col .valor-carrito{
+    font-size: 25px;
+}
+
+.cant{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
